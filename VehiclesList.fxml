@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane style="-fx-background-color: #62AEC0; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.database_grouppro.EquipmentsController">
+	<children>
+		<AnchorPane fx:id="p1" focusTraversable="true" layoutX="356.0" layoutY="150.0" prefHeight="503.0" prefWidth="435.0" style="-fx-background-color: #eeeeee; -fx-background-radius: 50;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="vehiclQuery" graphicTextGap="10.0" layoutX="275.0" layoutY="14.0" prefHeight="54.0" prefWidth="316.0" text="vehicl's Query" textAlignment="CENTER" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="300.33333333333337">
+					<font>
+						<Font name="Goudy Old Style Bold" size="45.0" />
+					</font>
+					<effect>
+						<ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+					</effect>
+				</Label>
+				<Button layoutX="827.0" layoutY="647.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="20.0" style="-fx-background-radius: 50; -fx-background-color: #eeeeee;" />
+				<Button fx:id="SortASCBYVehicleName" layoutX="570.0" layoutY="511.0" mnemonicParsing="false" onAction="#SORTnameasc" prefHeight="30.0" prefWidth="231.0" style="-fx-background-radius: 50; -fx-background-color: white;" text="Sort ASC BY VehicleName " textFill="#060a38" AnchorPane.leftAnchor="570.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="SortDESBYVIN" layoutX="571.2" layoutY="460.0" mnemonicParsing="false" onAction="#SORTnamedec" prefHeight="30.0" prefWidth="231.0" style="-fx-background-radius: 50; -fx-background-color: white;" text="Sort DES BY VIN" textFill="#02041b" AnchorPane.leftAnchor="571.0">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="GoToBasePage" contentDisplay="RIGHT" layoutX="14.0" layoutY="574.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="178.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To Home Page">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+				<Button fx:id="GoTodriverpage" layoutX="13.0" layoutY="503.0" mnemonicParsing="false" onAction="#Godriverpage" prefHeight="30.0" prefWidth="178.0" style="-fx-background-color: #62AEC0; -fx-border-radius: 50; -fx-background-radius: 50;" text="Go To driver page" textFill="#230202">
+					<font>
+						<Font name="Goudy Old Style Bold" size="16.0" />
+					</font>
+				</Button>
+            <Button fx:id="SortDESBYModelYear" layoutX="570.0" layoutY="574.0" mnemonicParsing="false" onAction="#SORTnameasc" prefHeight="30.0" prefWidth="231.0" style="-fx-background-radius: 50; -fx-background-color: white;" text="Sort DES BY  ModelYear" textFill="#060a38">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="16.0" />
+               </font>
+            </Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</AnchorPane>
+		<Text fx:id="incurancecompany" layoutX="42.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="incurance company">
+			<font>
+				<Font name="Goudy Old Style Bold" size="14.0" />
+			</font>
+		</Text>
+		<TableView fx:id="vehiclTable" layoutX="24.0" layoutY="79.0" prefHeight="353.0" prefWidth="826.0" style="-fx-border-radius: 50;">
+			<columns>
+				<TableColumn fx:id="V_id" prefWidth="138.66666221618652" text="VIN " />
+				<TableColumn fx:id="name" prefWidth="163.33335876464844" text=" VehicleName " />
+				<TableColumn fx:id="VehicleType" prefWidth="145.3333740234375" text=" VehicleType" />
+				<TableColumn fx:id="ModelYear" prefWidth="230.66665649414062" text=" ModelYear" />
+				<TableColumn fx:id="PremiumAmount" prefWidth="186.0" text="PremiumAmount" />
+			</columns>
+			<cursor>
+				<Cursor fx:constant="OPEN_HAND" />
+			</cursor>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+		</TableView>
+	</children>
+</AnchorPane>
